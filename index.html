@@ -1,438 +1,477 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 
-<meta name="description"
-content="An independent initiative to document abusive loan recovery practices and support affected borrowers.">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
 
-<title>Recovery Agent Harassment Reporting | SayNoToLoans.in</title>
+    <meta name="description"
+          content="An independent initiative to document abusive loan recovery practices and support affected borrowers.">
 
-<link rel="icon" href="favicon.svg">
+    <meta name="theme-color" content="#181818">
 
-<style>
+    <title>Recovery Agent Harassment Reporting | Say No To Loans</title>
 
-* {
-    box-sizing: border-box;
-}
+    <link rel="icon" href="favicon.svg">
 
-html {
-    scroll-behavior: smooth;
-}
+    <style>
 
-body {
-    margin: 0;
-    font-family: system-ui, Arial, sans-serif;
-    background: #faf5e9;
-    color: #252525;
-    line-height: 1.6;
-}
+        :root {
+            --dark: #181818;
+            --gold: #c9a55c;
+            --gold-light: #e8c77c;
+            --background: #f7f3ea;
+            --text: #252525;
+            --muted: #666666;
+            --border: #e3d8c2;
+        }
 
-/* HEADER */
+        * {
+            box-sizing: border-box;
+        }
 
-header {
-    background: #181818;
-    padding: 24px 6%;
-    border-bottom: 1px solid #514735;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-header strong {
-    color: #c9a55c;
-    letter-spacing: 2px;
-    font-size: 1.3rem;
-}
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system,
+                         BlinkMacSystemFont, "Segoe UI",
+                         Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-header small {
-    display: block;
-    color: #c9a55c;
-    letter-spacing: 2px;
-    margin-top: 4px;
-    font-size: .75rem;
-}
+        /* HEADER */
 
-/* HERO SECTION */
+        header {
+            background: var(--dark);
+            border-bottom: 1px solid #393329;
+        }
 
-.hero {
-    background: #181818;
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px 65px;
-}
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 24px;
+        }
 
-h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    line-height: 1.18;
-    margin: 0 auto 24px;
-    max-width: 900px;
-}
+        .brand {
+            display: inline-block;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
 
-h1 span {
-    display: block;
-    color: #c9a55c;
-}
+        .brand-subtitle {
+            margin-top: 4px;
+            color: #b8a47b;
+            font-size: .72rem;
+            letter-spacing: 1.8px;
+        }
 
-.hero p {
-    max-width: 700px;
-    margin: 0 auto 22px;
-    color: #ddd;
-}
+        /* HERO */
 
-.hero h2 {
-    color: #c9a55c;
-    margin: 20px 0;
-}
+        .hero {
+            background: var(--dark);
+            color: #ffffff;
+            padding: 55px 24px 60px;
+            text-align: center;
+        }
 
-/* REPORTING BUTTON */
+        .hero h1 {
+            max-width: 850px;
+            margin: 0 auto 20px;
+            font-size: clamp(1.9rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -.6px;
+        }
 
-.btn {
-    display: inline-block;
-    background: #c9a55c;
-    color: #181818;
-    padding: 15px 28px;
-    border-radius: 7px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background .2s ease;
-}
+        .hero h1 span {
+            display: block;
+            color: var(--gold);
+        }
 
-.btn:hover {
-    background: #e8c77c;
-}
+        .hero p {
+            max-width: 690px;
+            margin: 0 auto 26px;
+            color: #cccccc;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
 
-.btn:focus-visible {
-    outline: 3px solid #9a7636;
-    outline-offset: 5px;
-}
+        /* PRIMARY BUTTON */
 
-/* MAIN CONTENT */
+        .button {
+            display: inline-block;
+            padding: 13px 26px;
+            background: var(--gold);
+            color: var(--dark);
+            border-radius: 6px;
+            font-weight: 650;
+            text-decoration: none;
+            transition: background .2s ease;
+        }
 
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 35px 20px;
-    text-align: center;
-}
+        .button:hover {
+            background: var(--gold-light);
+        }
 
-h2 {
-    font-size: clamp(1.5rem, 3vw, 2.1rem);
-    line-height: 1.3;
-}
+        a:focus-visible {
+            outline: 3px solid #9a7636;
+            outline-offset: 5px;
+        }
 
-/* HARASSMENT CATEGORIES */
+        /* MAIN CONTENT */
 
-.grid {
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin: 25px 0 35px;
-}
+        main {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 36px 24px;
+        }
 
-.tile {
-    background: #fff;
-    border: 1px solid #e3d5b8;
-    border-radius: 10px;
-    padding: 22px 18px;
-    font-weight: 600;
-    transition: border-color .2s ease;
-}
+        /* HARASSMENT CATEGORIES */
 
-.tile:hover {
-    border-color: #c9a55c;
-}
+        .categories {
+            text-align: center;
+            margin-bottom: 32px;
+        }
 
-.tile span {
-    display: block;
-    color: #9a7636;
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-}
+        .categories h2 {
+            margin: 0 0 22px;
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+            font-weight: 650;
+        }
 
-/* COMPLAINT FORM */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
 
-.form-section {
-    margin-top: 30px;
-    scroll-margin-top: 15px;
-}
+        .category {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 72px;
+            padding: 16px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            font-size: .92rem;
+            font-weight: 550;
+            text-align: center;
+        }
 
-.form-container {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #181818;
-}
+        /* COMPLAINT FORM */
 
-.complaint-form {
-    display: block;
-    width: 100%;
-    height: 1250px;
-    border: 0;
-    background: #181818;
-}
+        .report-section {
+            margin-top: 28px;
+            scroll-margin-top: 16px;
+        }
 
-/* SHORT INFORMATION NOTES */
+        .form-container {
+            width: 100%;
+            background: var(--dark);
+            border-radius: 10px;
+            overflow: hidden;
+        }
 
-.notice {
-    font-size: .85rem;
-    color: #555;
-    max-width: 800px;
-    margin: 12px auto;
-}
+        .complaint-form {
+            display: block;
+            width: 100%;
+            height: 1250px;
+            border: none;
+            background: var(--dark);
+        }
 
-.notice a {
-    color: #80602a;
-    text-decoration: underline;
-}
+        /* FORM NOTES */
 
-.form-notes {
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
-}
+        .form-notes {
+            max-width: 800px;
+            margin: 18px auto 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: .82rem;
+            line-height: 1.7;
+        }
 
-/* FOOTER */
+        .form-notes p {
+            margin: 8px 0;
+        }
 
-footer {
-    background: #181818;
-    text-align: center;
-    padding: 28px 20px;
-    color: #bbb;
-    font-size: .85rem;
-    border-top: 1px solid #514735;
-}
+        .form-notes a {
+            color: #80602a;
+            font-weight: 600;
+            text-decoration: underline;
+        }
 
-footer strong {
-    color: #c9a55c;
-    font-size: 1.1rem;
-}
+        /* FOOTER */
 
-footer p {
-    margin: 8px 0;
-}
+        footer {
+            background: var(--dark);
+            border-top: 1px solid #393329;
+            color: #b5b5b5;
+            padding: 26px 20px;
+            text-align: center;
+            font-size: .8rem;
+        }
 
-/* MOBILE RESPONSIVE DESIGN */
+        .footer-brand {
+            color: var(--gold);
+            font-size: 1rem;
+            font-weight: 650;
+            margin-bottom: 8px;
+        }
 
-@media (max-width: 600px) {
+        footer p {
+            margin: 5px 0;
+        }
 
-    header {
-        padding: 20px;
-    }
+        /* MOBILE RESPONSIVE DESIGN */
 
-    header strong {
-        font-size: 1.1rem;
-    }
+        @media (max-width: 600px) {
 
-    .hero {
-        padding: 40px 20px 45px;
-    }
+            .header-inner {
+                padding: 18px 20px;
+            }
 
-    main {
-        padding: 25px 12px;
-    }
+            .brand {
+                font-size: 1rem;
+            }
 
-    .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-        margin-bottom: 25px;
-    }
+            .brand-subtitle {
+                font-size: .65rem;
+            }
 
-    .tile {
-        padding: 18px 10px;
-        font-size: .85rem;
-    }
+            .hero {
+                padding: 38px 20px 42px;
+            }
 
-    .tile span {
-        font-size: 1.4rem;
-    }
+            .hero p {
+                font-size: .92rem;
+            }
 
-    .form-section {
-        margin-top: 20px;
-    }
+            main {
+                padding: 26px 12px;
+            }
 
-    .complaint-form {
-        height: 1700px;
-    }
+            .category-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 9px;
+            }
 
-    .form-container {
-        border-radius: 8px;
-    }
+            .category {
+                font-size: .82rem;
+                padding: 12px 8px;
+                min-height: 65px;
+            }
 
-    .notice {
-        padding: 0 8px;
-    }
+            .categories {
+                margin-bottom: 22px;
+            }
 
-}
+            .report-section {
+                margin-top: 22px;
+            }
 
-@media (prefers-reduced-motion: reduce) {
+            .complaint-form {
+                height: 1700px;
+            }
 
-    html {
-        scroll-behavior: auto;
-    }
+            .form-container {
+                border-radius: 7px;
+            }
 
-}
+            .form-notes {
+                padding: 0 8px;
+            }
 
-</style>
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            .button {
+                transition: none;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
+    <!-- HEADER -->
 
-<header>
+    <header>
 
-    <strong>⚖ SAY NO TO LOANS</strong>
+        <div class="header-inner">
 
-    <small>CITIZEN FIRST INITIATIVE</small>
+            <a class="brand" href="/">
+                SAY NO TO LOANS
+            </a>
 
-    <small>AWARENESS · ACCOUNTABILITY · JUSTICE</small>
-
-</header>
-
-
-<!-- HERO SECTION -->
-
-<section class="hero">
-
-    <h1>
-        Recovery Agent Harassment
-        <span>Reporting Platform</span>
-    </h1>
-
-    <p>
-        Facing harassment from banks, NBFCs or
-        payday loan recovery agents?
-    </p>
-
-    <h2>You are not alone.</h2>
-
-    <p>
-        An independent initiative to document abusive
-        recovery practices and gather supporting evidence
-        for potential collective complaints, legal action
-        and regulatory escalation.
-    </p>
-
-    <a class="btn" href="#report-complaint">
-        Report Harassment Now →
-    </a>
-
-</section>
-
-
-<main>
-
-    <!-- HARASSMENT CATEGORIES -->
-
-    <h2>Types of harassment you can report</h2>
-
-    <div class="grid">
-
-        <div class="tile">
-            <span aria-hidden="true">☎</span>
-            Abusive Language &amp; Threats
-        </div>
-
-        <div class="tile">
-            <span aria-hidden="true">♧</span>
-            Contacting Family &amp; Public Shaming
-        </div>
-
-        <div class="tile">
-            <span aria-hidden="true">▣</span>
-            Home &amp; Workplace Threats
-        </div>
-
-        <div class="tile">
-            <span aria-hidden="true">⚿</span>
-            Persistent Harassment Calls
-        </div>
-
-        <div class="tile">
-            <span aria-hidden="true">▧</span>
-            Morphed Photographs
-        </div>
-
-        <div class="tile">
-            <span aria-hidden="true">⚠</span>
-            Fake Legal Notices
-        </div>
-
-    </div>
-
-
-    <!-- EMBEDDED COMPLAINT FORM -->
-
-    <section class="form-section" id="report-complaint">
-
-        <div class="form-container">
-
-            <iframe
-                class="complaint-form"
-                src="https://script.google.com/macros/s/AKfycbyREfxHgIpFtiKSu4I5YHVW7iguf1zg-RItuJjjEnJT9gxd7E60ntMVj5ua4ACSImEh/exec"
-                title="Say No To Loans Complaint Registration Form"
-                loading="lazy">
-            </iframe>
+            <div class="brand-subtitle">
+                CITIZEN FIRST INITIATIVE
+            </div>
 
         </div>
 
-        <div class="form-notes">
+    </header>
 
-            <p class="notice">
-                Please submit a separate complaint for each loan or lender.
-            </p>
 
-            <p class="notice">
-                Never share passwords, OTPs, banking credentials
-                or unmasked Aadhaar documents.
-            </p>
+    <!-- INTRODUCTION -->
 
-            <p class="notice">
+    <section class="hero">
 
-                Having trouble loading the form?
+        <h1>
+            Recovery Agent Harassment
+            <span>Reporting Platform</span>
+        </h1>
 
-                <a
-                    href="https://script.google.com/macros/s/AKfycbyREfxHgIpFtiKSu4I5YHVW7iguf1zg-RItuJjjEnJT9gxd7E60ntMVj5ua4ACSImEh/exec"
-                    target="_blank"
-                    rel="noopener noreferrer">
+        <p>
+            An independent initiative to document abusive
+            loan recovery practices and gather supporting
+            evidence for potential collective complaints,
+            legal action and regulatory escalation.
+        </p>
 
-                    Open in a new tab.
-
-                </a>
-
-            </p>
-
-        </div>
+        <a class="button" href="#report-complaint">
+            Report Harassment &rarr;
+        </a>
 
     </section>
 
-</main>
+
+    <main>
+
+        <!-- HARASSMENT CATEGORIES -->
+
+        <section class="categories"
+                 aria-labelledby="categories-heading">
+
+            <h2 id="categories-heading">
+                Types of Harassment
+            </h2>
+
+            <div class="category-grid">
+
+                <div class="category">
+                    Abusive Language &amp; Threats
+                </div>
+
+                <div class="category">
+                    Contacting Family &amp; Public Shaming
+                </div>
+
+                <div class="category">
+                    Home &amp; Workplace Threats
+                </div>
+
+                <div class="category">
+                    Persistent Harassment Calls
+                </div>
+
+                <div class="category">
+                    Misuse of Personal Photographs
+                </div>
+
+                <div class="category">
+                    Fake Legal Notices
+                </div>
+
+            </div>
+
+        </section>
 
 
-<!-- FOOTER -->
+        <!-- COMPLAINT FORM -->
 
-<footer>
+        <section class="report-section"
+                 id="report-complaint"
+                 aria-label="Complaint reporting form">
 
-    <strong>SayNoToLoans.in</strong>
+            <p class="form-notes">
+                Submit a separate complaint for each loan
+                or lender. Never share passwords, OTPs,
+                banking credentials or unmasked Aadhaar
+                documents.
+            </p>
 
-    <p>Citizen First Initiative</p>
+            <div class="form-container">
 
-    <p>© 2026 Say No To Loans. All rights reserved.</p>
+                <iframe
+                    class="complaint-form"
+                    src="https://script.google.com/macros/s/AKfycbyREfxHgIpFtiKSu4I5YHVW7iguf1zg-RItuJjjEnJT9gxd7E60ntMVj5ua4ACSImEh/exec"
+                    title="Recovery Agent Harassment Complaint Form"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
 
-    <p>
-        Independent initiative. Not a government reporting portal.
-    </p>
+            </div>
 
-    <p>
-        Complaint submission does not guarantee compensation,
-        settlement or legal action.
-    </p>
+            <div class="form-notes">
 
-</footer>
+                <p>
+                    Having trouble loading the form?
+
+                    <a
+                        href="https://script.google.com/macros/s/AKfycbyREfxHgIpFtiKSu4I5YHVW7iguf1zg-RItuJjjEnJT9gxd7E60ntMVj5ua4ACSImEh/exec"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open in a new tab
+                    </a>.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-brand">
+            SayNoToLoans.in
+        </div>
+
+        <p>
+            Citizen First Initiative
+        </p>
+
+        <p>
+            Independent initiative. Not a government reporting portal.
+        </p>
+
+        <p>
+            Submitting a complaint does not guarantee
+            compensation or legal action.
+        </p>
+
+        <p>
+            &copy; 2026 Say No To Loans.
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
