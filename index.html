@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -59,7 +60,7 @@ header small {
     background: #181818;
     color: #fff;
     text-align: center;
-    padding: 65px 20px 70px;
+    padding: 60px 20px 65px;
 }
 
 h1 {
@@ -76,15 +77,16 @@ h1 span {
 
 .hero p {
     max-width: 700px;
-    margin: 0 auto 25px;
+    margin: 0 auto 22px;
     color: #ddd;
 }
 
 .hero h2 {
     color: #c9a55c;
+    margin: 20px 0;
 }
 
-/* BUTTONS */
+/* REPORTING BUTTON */
 
 .btn {
     display: inline-block;
@@ -111,7 +113,7 @@ h1 span {
 main {
     max-width: 1100px;
     margin: auto;
-    padding: 45px 20px;
+    padding: 35px 20px;
     text-align: center;
 }
 
@@ -126,16 +128,21 @@ h2 {
     display: grid;
     grid-template-columns:
         repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-    margin: 30px 0 40px;
+    gap: 16px;
+    margin: 25px 0 35px;
 }
 
 .tile {
     background: #fff;
     border: 1px solid #e3d5b8;
     border-radius: 10px;
-    padding: 24px 18px;
+    padding: 22px 18px;
     font-weight: 600;
+    transition: border-color .2s ease;
+}
+
+.tile:hover {
+    border-color: #c9a55c;
 }
 
 .tile span {
@@ -145,47 +152,11 @@ h2 {
     margin-bottom: 8px;
 }
 
-/* INFORMATION SECTION */
-
-.information {
-    text-align: left;
-    max-width: 750px;
-    margin: 0 auto 35px;
-}
-
-.information h2 {
-    margin-bottom: 15px;
-}
-
-.information ul {
-    padding-left: 22px;
-}
-
-.information li {
-    margin-bottom: 6px;
-}
-
-.notice {
-    font-size: .85rem;
-    color: #555;
-    max-width: 750px;
-    margin: 18px auto;
-}
-
-.dark {
-    background: #252525;
-    color: #e8c77c;
-}
-
-.dark:hover {
-    background: #383838;
-}
-
-/* EMBEDDED COMPLAINT FORM */
+/* COMPLAINT FORM */
 
 .form-section {
-    margin-top: 40px;
-    scroll-margin-top: 20px;
+    margin-top: 30px;
+    scroll-margin-top: 15px;
 }
 
 .form-container {
@@ -203,14 +174,35 @@ h2 {
     background: #181818;
 }
 
+/* SHORT INFORMATION NOTES */
+
+.notice {
+    font-size: .85rem;
+    color: #555;
+    max-width: 800px;
+    margin: 12px auto;
+}
+
+.notice a {
+    color: #80602a;
+    text-decoration: underline;
+}
+
+.form-notes {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
 /* FOOTER */
 
 footer {
     background: #181818;
     text-align: center;
-    padding: 30px 20px;
+    padding: 28px 20px;
     color: #bbb;
     font-size: .85rem;
+    border-top: 1px solid #514735;
 }
 
 footer strong {
@@ -222,7 +214,7 @@ footer p {
     margin: 8px 0;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE RESPONSIVE DESIGN */
 
 @media (max-width: 600px) {
 
@@ -235,28 +227,30 @@ footer p {
     }
 
     .hero {
-        padding: 45px 20px 50px;
+        padding: 40px 20px 45px;
     }
 
     main {
-        padding: 30px 12px;
+        padding: 25px 12px;
     }
 
     .grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 25px;
     }
 
     .tile {
-        padding: 20px 15px;
+        padding: 18px 10px;
+        font-size: .85rem;
     }
 
-    .information {
-        padding: 0 8px;
+    .tile span {
+        font-size: 1.4rem;
     }
 
     .form-section {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .complaint-form {
@@ -265,6 +259,10 @@ footer p {
 
     .form-container {
         border-radius: 8px;
+    }
+
+    .notice {
+        padding: 0 8px;
     }
 
 }
@@ -278,6 +276,7 @@ footer p {
 }
 
 </style>
+
 </head>
 
 <body>
@@ -313,8 +312,8 @@ footer p {
 
     <p>
         An independent initiative to document abusive
-        recovery practices and support affected borrowers
-        through collective complaints, legal assistance
+        recovery practices and gather supporting evidence
+        for potential collective complaints, legal action
         and regulatory escalation.
     </p>
 
@@ -366,60 +365,7 @@ footer p {
     </div>
 
 
-    <!-- INFORMATION SECTION -->
-
-    <section class="information">
-
-        <h2>Information required</h2>
-
-        <ul>
-
-            <li>Personal and contact details</li>
-
-            <li>Loan and lender details</li>
-
-            <li>Nature of harassment</li>
-
-            <li>Previous complaint details, if any</li>
-
-            <li>Financial loss or employment impact, if applicable</li>
-
-            <li>Supporting evidence (optional)</li>
-
-            <li>Declaration and consent</li>
-
-        </ul>
-
-        <p class="notice">
-            Supporting documents: Maximum 10 files,
-            5 MB per file and 20 MB combined.
-        </p>
-
-        <p>
-            Please submit a separate complaint for each
-            loan or lender.
-        </p>
-
-        <p class="notice">
-            Never share passwords, OTPs, banking credentials
-            or unmasked Aadhaar documents.
-        </p>
-
-    </section>
-
-
-    <!-- MOTIVATIONAL SECTION -->
-
-    <h2>Your voice matters.</h2>
-
-    <p>Together, we stand stronger.</p>
-
-    <a class="btn dark" href="#report-complaint">
-        Open Reporting Form →
-    </a>
-
-
-    <!-- COMPLAINT FORM -->
+    <!-- EMBEDDED COMPLAINT FORM -->
 
     <section class="form-section" id="report-complaint">
 
@@ -438,21 +384,33 @@ footer p {
 
         </div>
 
-        <p class="notice">
+        <div class="form-notes">
 
-            Having trouble loading the form?
+            <p class="notice">
+                Please submit a separate complaint for each loan or lender.
+            </p>
 
-            <a
-                href="https://script.google.com/macros/s/AKfycbyREfxHgIpFtiKSu4I5YHVW7iguf1zg-RItuJjjEnJT9gxd7E60ntMVj5ua4ACSImEh/exec"
-                target="_blank"
-                rel="noopener noreferrer"
-                style="color:#9a7636">
+            <p class="notice">
+                Never share passwords, OTPs, banking credentials
+                or unmasked Aadhaar documents.
+            </p>
 
-                Open in a new tab.
+            <p class="notice">
 
-            </a>
+                Having trouble loading the form?
 
-        </p>
+                <a
+                    href="https://script.google.com/macros/s/AKfycbyREfxHgIpFtiKSu4I5YHVW7iguf1zg-RItuJjjEnJT9gxd7E60ntMVj5ua4ACSImEh/exec"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Open in a new tab.
+
+                </a>
+
+            </p>
+
+        </div>
 
     </section>
 
